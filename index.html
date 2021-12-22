@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
+        <link rel="stylesheet" href="./assets/css/style.css">
     <title>Resort.me</title>
 </head>
 <body>
     
 <header class="header" id="header">
     <nav class="nav container" id="navbar">
-        <!-- <span class="logo"></span> -->
         <a href="#" class="nav_logo">Resort.me</a>
         <div class="nav_menu" id="nav-menu">
                 <ul class="nav_list" id="nav-list">
@@ -33,9 +31,9 @@
                     </li>
                 </ul>
                 <div class="sign_buttons">
-                    <span class="login"><a href="">Login</a></span>
+                    <span class="login sign"><a href="">Login</a></span>
                     <div class="signup-box">
-                        <span class="signup"><a href="">Sign up</a></span>
+                        <span class="signup sign"><a href="">Sign up</a></span>
                     </div>
                 </div>
         </div>
@@ -46,9 +44,10 @@
         </div>
     </nav>
 </header>
-<main>
-    <img src="./img/1.png" alt="sign" class="sign-img">
-    <section class="header-elements section" id="home">
+<main class="main">
+    <img src="./img/1.png" alt="sign" class="main_sign-img">
+    <div class="scroll-arrow-up scroll"><i class="fas fa-arrow-up arrow-up-icon"></i></div>
+    <section class="section home container" id="home">
         <div class="hero-desc">
             <p class="heading">
                 Find <span>best hotel</span> for you!
@@ -63,85 +62,83 @@
             </div>
             <div class="search-box">
                 <input type="text" class="search-input" placeholder="Search your favourite location">
-                <span class="search-button">search</span>
+                <a href="./assets/pages/hotel.html" class="search-button btn">search</a>
                 <img class="scroll-line" src="./img/scrollvector.png" alt="scroll line">
-                <!-- <img class="scroll-arrow" src="./img/scrollarrow.png" alt="scroll arrow">
-                    <img src="./img/scrollarrow1.svg" alt=""> -->
-                <div class="scroll-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="scroll-arrow-down scroll"><i class="fas fa-arrow-down arrow-down-icon"></i></div>
             </div>
         </div>
         <div class="hero-images" id="hero-images">
             <div class="card one">
-                <img src="./img/luxury.png" alt="luxury">
+                <img class="card_img" src="./img/luxury.png" alt="luxury">
                 <div class="heading">
-                    <h3>Luxury Travel Export</h3>
-                    <div class="stars">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
+                    <h3 class="card_title">Luxury Travel Export</h3>
+                    <div class="card_stars">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
                     </div>
                 </div>
-                <p class="des">
+                <p class="card_description">
                     Always get adieus nature day course for common. Relation so in confined smallest children unpacked
                     delicate. Why sir
                     end
                     believe uncivil respect.
                 </p>
-                <span>
+                <span class="card_read">
                     read more
                 </span>
             </div>
             <div class="card two">
-                <img src="./img/bali.png" alt="bali">
+                <img class="card_img" src="./img/bali.png" alt="bali">
                 <div class="heading">
-                    <h3>Bali Ilands</h3>
-                    <div class="stars">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
+                    <h3 class="card_title">Bali Ilands</h3>
+                    <div class="card_stars">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
                     </div>
                 </div>
-                <p class="des">
+                <p class="card_description">
                     Always get adieus nature day course for common. Relation so in confined smallest children unpacked
                     delicate. Why sir
                     end
                     believe uncivil respect.
                 </p>
-                <span>
+                <span class="card_read">
                     read more
                 </span>
             </div>
             <div class="card three">
-                <img src="./img/mitsui.png" alt="mitsui">
+                <img class="card_img" src="./img/mitsui.png" alt="mitsui">
                 <div class="heading">
-                    <h3>Hotel The Mitsui Koyo</h3>
-                    <div class="stars">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
-                        <img src="./img/star.png" alt="star">
+                    <h3 class="card_title">Hotel The Mitsui Koyo</h3>
+                    <div class="card_stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
                     </div>
                 </div>
-                <p class="des">
+                <p class="card_description">
                     Always get adieus nature day course for common. Relation so in confined smallest children unpacked
                     delicate. Why sir
                     end
                     believe uncivil respect.
                 </p>
-                <span>
+                <span class="card_read">
                     read more
                 </span>
             </div>
-            <img src="./img/map.png" alt="map" class="map-img">
         </div>
+        <img src="./img/map.png" alt="map" class="map_img">
     </section>
    <section class="section logos">
-        <div class="logos-container">
+        <div class="logos-container container">
             <span>planday</span>
             <span>umbraco</span>
             <span>pearlfisher.</span>
@@ -150,15 +147,157 @@
         </div>
    </section>
     <section class="section galleries">
-        <div class="gallery-container">
-            <img class="sign-img" src="./img/2.png" alt="sign vector">
-            <h2 class="heading"><Span>amazing</Span> gallery</h2>
-            <div class="wrapper">
-                <img src="./img/gallery1.png" alt="tower">
-                <img src="./img/gallery2.png" alt="mountain">
-                <img src="./img/gallery3.png" alt="china">
-                <img src="./img/gallery4.png" alt="brazil">
-                <img src="./img/gallery5.png" alt="jaban">
+        <div class="gallery-container container">          
+            <h2 class="gallery_heading title">
+                <img class="title_sign-img" src="./img/2.png" alt="sign vector">
+                <Span>amazing</Span> gallery
+            </h2>
+            <div class="img_wrapper">
+                <img class="gallery_img" src="./img/gallery1.png" alt="tower">
+                <img class="gallery_img" src="./img/gallery2.png" alt="mountain">
+                <img class="gallery_img" src="./img/gallery3.png" alt="china">
+                <img class="gallery_img" src="./img/gallery4.png" alt="brazil">
+                <img class="gallery_img" src="./img/gallery5.png" alt="jaban">
+            </div>
+            <a href="./assets/pages/galleries.html" class="gallery_btn btn">view more</a>
+        </div>
+    </section>
+    <section class="section destinations">
+        <div class="destinations_container container">
+            <h2 class="title destination_heading">
+                <img class="title_sign-img" src="./img/2.png" alt="sign vector">
+                our best <Span>destinations</Span> 
+            </h2>
+            <div class="destination_cards" id="destination_cards">
+                <div class="card active_card">
+                    <img class="destination_img" src="./img/luxury.png" alt="luxury">
+                    <div class="heading">
+                        <h3 class="card_title">Luxury Travel Export</h3>
+                        <div class="card_stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="card_description">
+                        Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                        delicate. Why sir
+                        end
+                        believe uncivil respect.
+                    </p>
+                    <div class="card_equipment">
+                        <i class="fas fa-wifi icon"></i>
+                        <i class="fas fa-concierge-bell icon"></i>
+                        <i class="fas fa-bed icon"></i>
+                        <i class="fas fa-bath icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="destination_img" src="./img/luxury.png" alt="luxury">
+                    <div class="heading">
+                        <h3 class="card_title">Luxury Travel Export</h3>
+                        <div class="card_stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="card_description">
+                        Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                        delicate. Why sir
+                        end
+                        believe uncivil respect.
+                    </p>
+                    <div class="card_equipment">
+                        <i class="fas fa-wifi icon"></i>
+                        <i class="fas fa-concierge-bell icon"></i>
+                        <i class="fas fa-bed icon"></i>
+                        <i class="fas fa-bath icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="destination_img" src="./img/luxury.png" alt="luxury">
+                    <div class="heading">
+                        <h3 class="card_title">Luxury Travel Export</h3>
+                        <div class="card_stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="card_description">
+                        Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                        delicate. Why sir
+                        end
+                        believe uncivil respect.
+                    </p>
+                    <div class="card_equipment">
+                        <i class="fas fa-wifi icon"></i>
+                        <i class="fas fa-concierge-bell icon"></i>
+                        <i class="fas fa-bed icon"></i>
+                        <i class="fas fa-bath icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="destination_img" src="./img/luxury.png" alt="luxury">
+                    <div class="heading">
+                        <h3 class="card_title">Luxury Travel Export</h3>
+                        <div class="card_stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="card_description">
+                        Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                        delicate. Why sir
+                        end
+                        believe uncivil respect.
+                    </p>
+                    <div class="card_equipment">
+                        <i class="fas fa-wifi icon"></i>
+                        <i class="fas fa-concierge-bell icon"></i>
+                        <i class="fas fa-bed icon"></i>
+                        <i class="fas fa-bath icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="destination_img" src="./img/luxury.png" alt="luxury">
+                    <div class="heading">
+                        <h3 class="card_title">Luxury Travel Export</h3>
+                        <div class="card_stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="card_description">
+                        Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                        delicate. Why sir
+                        end
+                        believe uncivil respect.
+                    </p>
+                    <div class="card_equipment">
+                        <i class="fas fa-wifi icon"></i>
+                        <i class="fas fa-concierge-bell icon"></i>
+                        <i class="fas fa-bed icon"></i>
+                        <i class="fas fa-bath icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination" id="pagination">
+                <div class="lines"></div>
+                <div class="arrows"></div>
             </div>
         </div>
     </section>
