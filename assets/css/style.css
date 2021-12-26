@@ -25,6 +25,7 @@
   --first-color-light: rgb(98 172 67 / 69%);
   --second-color: #313131;
   --second-color-second: #828282;
+  --border-color: #dddddd;
 }
 
 /* ===== Font size for large devices ===== */
@@ -71,8 +72,6 @@ a:active {
 }
 body {
   font-family: var(--mainfont);
-  /* max-width: 1350px; */
-  height: 3000px;
   overflow-x: hidden;
 }
 /* =======================    Reusable CSS classes     ======================== */
@@ -98,6 +97,7 @@ body {
 .btn {
   display: block;
   width: 163px;
+  margin: 0 auto;
   text-align: center;
   line-height: 45px;
   text-transform: uppercase;
@@ -111,7 +111,7 @@ body {
     0px 20px 13px rgba(56, 56, 56, 0.05),
     0px 8.14815px 6.51852px rgba(56, 56, 56, 0.0392593),
     0px 1.85185px 3.14815px rgba(56, 56, 56, 0.0240741);
-  transition: 0.4s;
+  transition: 0.4s ease-in-out;
 }
 .btn:hover {
   color: #fff;
@@ -126,7 +126,8 @@ body {
   transform: translateX(-50%);
 }
 
-.title {
+.subtitle {
+  position: relative;
   font-weight: 400;
   font-size: 2.5rem;
   color: var(--second-color);
@@ -134,11 +135,13 @@ body {
   text-align: center;
   text-transform: capitalize;
 }
-.title .underlined {
+.subtitle span {
   display: inline-block;
+}
+.subtitle .underlined {
   position: relative;
 }
-.title .underlined::after {
+.subtitle .underlined::after {
   position: absolute;
   display: block;
   content: "";
@@ -147,11 +150,23 @@ body {
   right: 0;
   top: 50px;
 }
-.title .second {
+.green::after {
+  background-color: var(--first-color);
+}
+.gray::after {
+  background-color: var(--second-color);
+}
+.subtitle .second {
   margin: 0 1rem;
 }
-.title .colored {
+.subtitle .colored {
   color: var(--first-color);
+}
+
+.mySwiper_one,
+.mySwiper_two {
+  z-index: 0;
+  overflow: visible;
 }
 /* --------------------  Cards  ----------------------*/
 
@@ -160,6 +175,12 @@ body {
 }
 .star {
   color: #fdcc0d;
+}
+.card_title {
+  font-weight: 600;
+  font-size: 0.43rem;
+  color: var(--second-color);
+  text-transform: capitalize;
 }
 /* ===================    Header   ==================== */
 .nav {
@@ -417,16 +438,14 @@ body {
   justify-content: space-between;
   margin: 3px 0 8px;
 }
-.card_title {
+.hero-images .card_title {
   font-weight: 600;
   font-size: 0.43rem;
-  color: var(--second-color);
-  text-transform: capitalize;
 }
 .hero-images .star {
   font-size: 0.4rem;
 }
-.card_description {
+.hero-images .card_description {
   font-size: 0.425rem;
   color: var(--second-color-second);
   margin-bottom: 8px;
@@ -507,9 +526,6 @@ body {
 }
 
 /* ========================   GALLERIES  =========================== */
-.gallery_heading .underlined::after {
-  background-color: var(--second-color);
-}
 .gallery_heading::after {
   width: 130px;
   right: 394px;
@@ -542,7 +558,7 @@ body {
     "img1 img2 img4"
     "img1 img3 img4"
     "img1 img3 img5";
-  margin: 0 auto 7rem;
+  margin-bottom: 7rem;
 }
 
 .gallery_img:nth-child(1) {
@@ -560,29 +576,22 @@ body {
 .gallery_img:nth-child(5) {
   grid-area: img5;
 }
-.gallery_btn {
-  margin: 0 auto;
-}
 /* ========================   DESTINATIONS  =========================== */
-.destination_heading .underlined::after {
-  background-color: var(--first-color);
-}
+
 .destination_cards {
   display: flex;
   width: max-content;
 }
-.destination_cards .card {
-  /* width: 370px !important; */
+.destinations .card {
   height: 450px;
   background: #ffffff;
   padding: 0.8rem;
-  /* margin-right: 1.5rem; */
   border-radius: 5px;
   border: 1px solid rgb(130 130 130 / 32%);
   cursor: default;
   transition: box-shadow 0.2s ease-in-out;
 }
-.destination_cards .card:hover {
+.destinations .card:hover {
   box-shadow: 0px 65.3611px 52.2889px rgba(68, 68, 68, 0.1),
     0px 42.3637px 30.6229px rgba(68, 68, 68, 0.0759259),
     0px 25.1761px 16.655px rgba(68, 68, 68, 0.0607407),
@@ -591,18 +600,18 @@ body {
     0px 1.21039px 2.05766px rgba(68, 68, 68, 0.0240741);
   border: none;
 }
-.destination_cards .destination_img {
+.destinations .destination_img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   border-radius: 5px;
 }
-.destination_cards .card .heading {
+.destinations .card .heading {
   display: flex;
   justify-content: space-between;
   margin: 0.8rem 0 1rem;
 }
-.destination_cards .card_title {
+.destinations .card_title {
   display: inline-block;
   font-weight: 600;
   font-size: 1.1rem;
@@ -611,76 +620,211 @@ body {
   margin-right: 4px;
   color: var(--second-color);
 }
-.destination_cards .star {
+.destinations .star {
   font-size: 0.88rem;
 }
-.destination_cards .card_description {
+.destinations .card_description {
   font-size: 0.88rem;
   color: var(--second-color-second);
   margin-bottom: 1rem;
 }
-.card_equipment {
+.destinations .card_equipment {
   bottom: 20px;
   position: absolute;
 }
-.card_equipment .icon {
+.destinations .card_equipment .icon {
   color: var(--first-color);
   font-size: 0.9rem;
   padding: 5px;
   border: 1px solid var(--first-color);
   border-radius: 3px;
 }
-
-.mySwiper {
-  z-index: 0;
-  overflow: visible;
-}
-.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
+.destinations .swiper-pagination-bullets,
+.destinations .swiper-pagination-bullets.swiper-pagination-horizontal {
   width: initial;
   bottom: -40px;
   transform: translateY(+50%);
 }
-.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
+.destinations .swiper-pagination-bullets .swiper-pagination-bullet,
+.destinations
+  .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
   border-radius: 2px;
   width: 30px;
   height: 4px;
 }
-.swiper-pagination-bullet-active {
+.destinations .swiper-pagination-bullet-active {
   background-color: var(--first-color);
 }
 
-.swiper-button-prev,
-.swiper-rtl .swiper-button-next {
+.destinations .swiper-button-prev {
   top: unset;
   left: unset;
   right: 50px;
   bottom: -40px;
   transform: translateY(+50%);
 }
-.swiper-button-prev,
-.swiper-rtl .swiper-button-next {
-  top: unset;
-  left: unset;
-  right: 50px;
-  bottom: -40px;
-  transform: translateY(+50%);
-}
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
+.destinations .swiper-button-next {
   top: unset;
   left: unset;
   right: 20px;
   bottom: -40px;
   transform: translateY(+50%);
 }
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after,
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
+.destinations .swiper-button-next:after,
+.destinations .swiper-button-prev:after {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--first-color);
+}
+
+/* ========================   WHY US  =========================== */
+.why_us-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  margin-bottom: 7rem;
+}
+
+.why_us-cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.why_us-cards .card-img {
+  width: fit-content;
+  padding: 1.2rem;
+  background: #ffffff;
+  box-shadow: inset 0px 0px 10px rgb(0 0 0 / 10%);
+  border-radius: 5px;
+}
+.why_us-cards .card-icon {
+  font-size: 2.5rem;
+  color: var(--first-color);
+}
+.card-icon.fa-plane {
+  transform: rotate(-90deg);
+}
+.why_us-cards .card_heading {
+  margin: 2.5rem 0;
+}
+.why_us-cards .card_title {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.why_us-cards .card_description {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+}
+
+/* ========================   OUR customers  =========================== */
+.customer_cards {
+  text-align: center;
+  margin-bottom: 7rem;
+}
+.customer_card {
+  display: inline-block;
+  width: 864px;
+  padding: 3rem;
+  background: #ffffff;
+  box-shadow: 0px 20px 60px rgba(46, 33, 61, 0.08);
+  border-radius: 10px;
+}
+.customers .swiper-button-prev {
+  top: unset;
+  left: 47%;
+  bottom: -100px;
+}
+.customers .swiper-button-next {
+  top: unset;
+  right: 47%;
+  bottom: -100px;
+}
+.customers .swiper-button-next:after,
+.customers .swiper-button-prev:after {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--first-color);
+}
+
+.customers .card_title {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+.customers .card_subtitle {
+  font-size: 1.2rem;
+  color: var(--second-color-second);
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+.customers .card_description {
+  font-size: 0.88rem;
+  color: var(--second-color-second);
+  margin-bottom: 8px;
+  line-height: 1.8rem;
+  width: 750px;
+}
+.customers .avatar {
+  width: 140px;
+  border-radius: 50%;
+  background-color: #dddddd52;
+}
+
+/* ========================   FOOTER  =========================== */
+
+.footer {
+  background-color: var(--second-color);
+  padding: 100px 0 15px;
+  color: #fff;
+  font-weight: 100;
+}
+.footer_newsletter {
+  width: 470px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+.footer_newsletter h3 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  line-height: 80px;
+  letter-spacing: -1px;
+}
+.footer_newsletter .btn {
+  text-transform: uppercase;
+  color: var(--second-color);
+  background-color: #f7f7f7;
+}
+.footer_newsletter .btn:hover {
+  background-color: var(--first-color);
+}
+
+.footer_links {
+  display: flex;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  line-height: 2rem;
+}
+.footer_links .category {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.footer_links .brand {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.footer_links .category_title {
+  margin-bottom: 0.8rem;
+}
+.footer_links .category:nth-child(1) {
+  flex-grow: 3;
+}
+.footer_links .category:nth-child(4) {
+  align-items: center;
+}
+.copyright {
+  text-align: center;
 }
