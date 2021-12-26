@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/swiper.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
     <title>Resort.me</title>
 </head>
 <body>
@@ -45,7 +48,7 @@
     </nav>
 </header>
 <main class="main">
-    <img src="./img/1.png" alt="sign" class="main_sign-img">
+    <img src="assets/img/1.png" alt="sign" class="main_sign-img">
     <div class="scroll-arrow-up scroll"><i class="fas fa-arrow-up arrow-up-icon"></i></div>
     <section class="section home container" id="home">
         <div class="hero-desc">
@@ -63,13 +66,13 @@
             <div class="search-box">
                 <input type="text" class="search-input" placeholder="Search your favourite location">
                 <a href="./assets/pages/hotel.html" class="search-button btn">search</a>
-                <img class="scroll-line" src="./img/scrollvector.png" alt="scroll line">
+                <img class="scroll-line" src="assets/img/scrollvector.png" alt="scroll line">
                 <div class="scroll-arrow-down scroll"><i class="fas fa-arrow-down arrow-down-icon"></i></div>
             </div>
         </div>
         <div class="hero-images" id="hero-images">
             <div class="card one">
-                <img class="card_img" src="./img/luxury.png" alt="luxury">
+                <img class="card_img" src="assets/img/luxury.png" alt="luxury">
                 <div class="heading">
                     <h3 class="card_title">Luxury Travel Export</h3>
                     <div class="card_stars">
@@ -91,7 +94,7 @@
                 </span>
             </div>
             <div class="card two">
-                <img class="card_img" src="./img/bali.png" alt="bali">
+                <img class="card_img" src="assets/img/bali.png" alt="bali">
                 <div class="heading">
                     <h3 class="card_title">Bali Ilands</h3>
                     <div class="card_stars">
@@ -113,7 +116,7 @@
                 </span>
             </div>
             <div class="card three">
-                <img class="card_img" src="./img/mitsui.png" alt="mitsui">
+                <img class="card_img" src="assets/img/mitsui.png" alt="mitsui">
                 <div class="heading">
                     <h3 class="card_title">Hotel The Mitsui Koyo</h3>
                     <div class="card_stars">
@@ -135,7 +138,7 @@
                 </span>
             </div>
         </div>
-        <img src="./img/map.png" alt="map" class="map_img">
+        <img src="assets/img/map.png" alt="map" class="map_img">
     </section>
    <section class="section logos">
         <div class="logos-container container">
@@ -149,159 +152,234 @@
     <section class="section galleries">
         <div class="gallery-container container">          
             <h2 class="gallery_heading title">
-                <img class="title_sign-img" src="./img/2.png" alt="sign vector">
-                <Span>amazing</Span> gallery
+                <img class="title_sign-img" src="assets/img/2.png" alt="sign vector">
+                <span class="first colored">amazing</span><span class="second underlined">gallery</span>
             </h2>
             <div class="img_wrapper">
-                <img class="gallery_img" src="./img/gallery1.png" alt="tower">
-                <img class="gallery_img" src="./img/gallery2.png" alt="mountain">
-                <img class="gallery_img" src="./img/gallery3.png" alt="china">
-                <img class="gallery_img" src="./img/gallery4.png" alt="brazil">
-                <img class="gallery_img" src="./img/gallery5.png" alt="jaban">
+                <img class="gallery_img" src="assets/img/gallery1.png" alt="tower">
+                <img class="gallery_img" src="assets/img/gallery2.png" alt="mountain">
+                <img class="gallery_img" src="assets/img/gallery3.png" alt="china">
+                <img class="gallery_img" src="assets/img/gallery4.png" alt="brazil">
+                <img class="gallery_img" src="assets/img/gallery5.png" alt="jaban">
             </div>
-            <a href="./assets/pages/galleries.html" class="gallery_btn btn">view more</a>
+            <a href="./assets/pages/galleries.html" class="gallery_btn btn" target="_blank">view more</a>
         </div>
     </section>
     <section class="section destinations">
         <div class="destinations_container container">
             <h2 class="title destination_heading">
-                <img class="title_sign-img" src="./img/2.png" alt="sign vector">
-                our best <Span>destinations</Span> 
+                <img class="title_sign-img" src="assets/img/2.png" alt="sign vector">
+                <span class="first">our best</span><span class="second underlined colored">destinations</span>
             </h2>
-            <div class="destination_cards" id="destination_cards">
-                <div class="card active_card">
-                    <img class="destination_img" src="./img/luxury.png" alt="luxury">
-                    <div class="heading">
-                        <h3 class="card_title">Luxury Travel Export</h3>
-                        <div class="card_stars">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
+            <div class="swiper mySwiper">
+                <div class="destination_cards swiper-wrapper" id="destination_cards">
+                    <div class="card swiper-slide">
+                        <img class="destination_img" src="assets/img/des01.jpg" alt="hotel the mitsui kyoto">
+                        <div class="heading">
+                            <h3 class="card_title">hotel the mitsui kyoto</h3>
+                            <div class="card_stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                        </div>
+                        <p class="card_description">
+                            Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                            delicate. Why sir
+                            end
+                            believe uncivil respect.
+                        </p>
+                        <div class="card_equipment">
+                            <i class="fas fa-wifi icon"></i>
+                            <i class="fas fa-concierge-bell icon"></i>
+                            <i class="fas fa-bed icon"></i>
+                            <i class="fas fa-bath icon"></i>
                         </div>
                     </div>
-                    <p class="card_description">
-                        Always get adieus nature day course for common. Relation so in confined smallest children unpacked
-                        delicate. Why sir
-                        end
-                        believe uncivil respect.
-                    </p>
-                    <div class="card_equipment">
-                        <i class="fas fa-wifi icon"></i>
-                        <i class="fas fa-concierge-bell icon"></i>
-                        <i class="fas fa-bed icon"></i>
-                        <i class="fas fa-bath icon"></i>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="destination_img" src="./img/luxury.png" alt="luxury">
-                    <div class="heading">
-                        <h3 class="card_title">Luxury Travel Export</h3>
-                        <div class="card_stars">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
+                    <div class="card swiper-slide">
+                        <img class="destination_img" src="assets/img/des02.jpg" alt="Hotel Villa Santa Catarina">
+                        <div class="heading">
+                            <h3 class="card_title">hotel villa santa catarina</h3>
+                            <div class="card_stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                        </div>
+                        <p class="card_description">
+                            Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                            delicate. Why sir
+                            end
+                            believe uncivil respect.
+                        </p>
+                        <div class="card_equipment">
+                            <i class="fas fa-wifi icon"></i>
+                            <i class="fas fa-concierge-bell icon"></i>
+                            <i class="fas fa-bed icon"></i>
+                            <i class="fas fa-bath icon"></i>
                         </div>
                     </div>
-                    <p class="card_description">
-                        Always get adieus nature day course for common. Relation so in confined smallest children unpacked
-                        delicate. Why sir
-                        end
-                        believe uncivil respect.
-                    </p>
-                    <div class="card_equipment">
-                        <i class="fas fa-wifi icon"></i>
-                        <i class="fas fa-concierge-bell icon"></i>
-                        <i class="fas fa-bed icon"></i>
-                        <i class="fas fa-bath icon"></i>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="destination_img" src="./img/luxury.png" alt="luxury">
-                    <div class="heading">
-                        <h3 class="card_title">Luxury Travel Export</h3>
-                        <div class="card_stars">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
+                    <div class="card swiper-slide">
+                        <img class="destination_img" src="assets/img/des03.jpg" alt="Nandini Bali Jungle Resort and Spa">
+                        <div class="heading">
+                            <h3 class="card_title">Nandini Bali Jungle Resort and Spa</h3>
+                            <div class="card_stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                        </div>
+                        <p class="card_description">
+                            Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                            delicate. Why sir
+                            end
+                            believe uncivil respect.
+                        </p>
+                        <div class="card_equipment">
+                            <i class="fas fa-wifi icon"></i>
+                            <i class="fas fa-concierge-bell icon"></i>
+                            <i class="fas fa-bed icon"></i>
+                            <i class="fas fa-bath icon"></i>
                         </div>
                     </div>
-                    <p class="card_description">
-                        Always get adieus nature day course for common. Relation so in confined smallest children unpacked
-                        delicate. Why sir
-                        end
-                        believe uncivil respect.
-                    </p>
-                    <div class="card_equipment">
-                        <i class="fas fa-wifi icon"></i>
-                        <i class="fas fa-concierge-bell icon"></i>
-                        <i class="fas fa-bed icon"></i>
-                        <i class="fas fa-bath icon"></i>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="destination_img" src="./img/luxury.png" alt="luxury">
-                    <div class="heading">
-                        <h3 class="card_title">Luxury Travel Export</h3>
-                        <div class="card_stars">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
+                    <div class="card swiper-slide">
+                        <img class="destination_img" src="assets/img/des04.jpg" alt="Souq Waqif Boutique Hotels by Tivoli">
+                        <div class="heading">
+                            <h3 class="card_title">Luxury Travel Export</h3>
+                            <div class="card_stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                        </div>
+                        <p class="card_description">
+                            Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                            delicate. Why sir
+                            end
+                            believe uncivil respect.
+                        </p>
+                        <div class="card_equipment">
+                            <i class="fas fa-wifi icon"></i>
+                            <i class="fas fa-concierge-bell icon"></i>
+                            <i class="fas fa-bed icon"></i>
+                            <i class="fas fa-bath icon"></i>
                         </div>
                     </div>
-                    <p class="card_description">
-                        Always get adieus nature day course for common. Relation so in confined smallest children unpacked
-                        delicate. Why sir
-                        end
-                        believe uncivil respect.
-                    </p>
-                    <div class="card_equipment">
-                        <i class="fas fa-wifi icon"></i>
-                        <i class="fas fa-concierge-bell icon"></i>
-                        <i class="fas fa-bed icon"></i>
-                        <i class="fas fa-bath icon"></i>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="destination_img" src="./img/luxury.png" alt="luxury">
-                    <div class="heading">
-                        <h3 class="card_title">Luxury Travel Export</h3>
-                        <div class="card_stars">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
+                    <div class="card swiper-slide">
+                        <img class="destination_img" src="assets/img/des05.jpg" alt="oak bay beach hotel">
+                        <div class="heading">
+                            <h3 class="card_title">oak bay beach hotel</h3>
+                            <div class="card_stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                        </div>
+                        <p class="card_description">
+                            Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                            delicate. Why sir
+                            end
+                            believe uncivil respect.
+                        </p>
+                        <div class="card_equipment">
+                            <i class="fas fa-wifi icon"></i>
+                            <i class="fas fa-concierge-bell icon"></i>
+                            <i class="fas fa-bed icon"></i>
+                            <i class="fas fa-bath icon"></i>
                         </div>
                     </div>
-                    <p class="card_description">
-                        Always get adieus nature day course for common. Relation so in confined smallest children unpacked
-                        delicate. Why sir
-                        end
-                        believe uncivil respect.
-                    </p>
-                    <div class="card_equipment">
-                        <i class="fas fa-wifi icon"></i>
-                        <i class="fas fa-concierge-bell icon"></i>
-                        <i class="fas fa-bed icon"></i>
-                        <i class="fas fa-bath icon"></i>
+                    <div class="card swiper-slide">
+                        <img class="destination_img" src="assets/img/des06.jpg" alt="waldorf astoria beijing hotel">
+                        <div class="heading">
+                            <h3 class="card_title">waldorf astoria beijing hotel</h3>
+                            <div class="card_stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                        </div>
+                        <p class="card_description">
+                            Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                            delicate. Why sir
+                            end
+                            believe uncivil respect.
+                        </p>
+                        <div class="card_equipment">
+                            <i class="fas fa-wifi icon"></i>
+                            <i class="fas fa-concierge-bell icon"></i>
+                            <i class="fas fa-bed icon"></i>
+                            <i class="fas fa-bath icon"></i>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img class="destination_img" src="assets/img/des07.jpg" alt="badrutt's palace hotel">
+                        <div class="heading">
+                            <h3 class="card_title">badrutt's palace hotel</h3>
+                            <div class="card_stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                        </div>
+                        <p class="card_description">
+                            Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                            delicate. Why sir
+                            end
+                            believe uncivil respect.
+                        </p>
+                        <div class="card_equipment">
+                            <i class="fas fa-wifi icon"></i>
+                            <i class="fas fa-concierge-bell icon"></i>
+                            <i class="fas fa-bed icon"></i>
+                            <i class="fas fa-bath icon"></i>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img class="destination_img" src="assets/img/des08.jpg" alt="la mamounia">
+                        <div class="heading">
+                            <h3 class="card_title">la mamounia</h3>
+                            <div class="card_stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                        </div>
+                        <p class="card_description">
+                            Always get adieus nature day course for common. Relation so in confined smallest children unpacked
+                            delicate. Why sir
+                            end
+                            believe uncivil respect.
+                        </p>
+                        <div class="card_equipment">
+                            <i class="fas fa-wifi icon"></i>
+                            <i class="fas fa-concierge-bell icon"></i>
+                            <i class="fas fa-bed icon"></i>
+                            <i class="fas fa-bath icon"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="pagination" id="pagination">
-                <div class="lines"></div>
-                <div class="arrows"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination" id="pagination"></div>
             </div>
         </div>
     </section>
 </main>
-<script src="./assets/js/main.js"></script>
 </body>
 </html>
